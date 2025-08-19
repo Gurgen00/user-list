@@ -1,0 +1,17 @@
+<div class="filters">
+  <input
+    type="text"
+    pInputText
+    [(ngModel)]="searchTerm"
+    (ngModelChange)="onSearchChange()"
+    placeholder="Поиск по имени..."
+  />
+
+  <p-dropdown
+    [options]="filterOptions"
+    [(ngModel)]="selectedFilter"
+    optionLabel="label"
+    (onChange)="onFilterChange()"
+    styleClass="filter-dropdown"
+  ></p-dropdown>
+</div>
