@@ -9,7 +9,7 @@ import { DropdownModule } from 'primeng/dropdown';
   standalone: true,
   imports: [CommonModule, FormsModule, InputTextModule, DropdownModule],
   templateUrl: './user-filters.component.html',
-  styleUrls: ['./user-filters.component.css']
+  styleUrls: ['./user-filters.component.css'],
 })
 export class UserFiltersComponent {
   @Output() searchChange = new EventEmitter<string>();

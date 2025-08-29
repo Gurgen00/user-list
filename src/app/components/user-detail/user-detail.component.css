@@ -1,0 +1,10 @@
+.email-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  transition: transform 0.2s ease;
+}
+
+.email-card:hover {
+  transform: translateY(-3px);
+}

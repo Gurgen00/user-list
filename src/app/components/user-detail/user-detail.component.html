@@ -1,4 +1,6 @@
-<p-card *ngIf="email">
-  <ng-template pTemplate="title">Email выбранного пользователя</ng-template>
+<p-card *ngIf="email" class="email-card">
+  <ng-template pTemplate="title">
+    📧 Email выбранного пользователя
+  </ng-template>
   <p>{{ email }}</p>
 </p-card>

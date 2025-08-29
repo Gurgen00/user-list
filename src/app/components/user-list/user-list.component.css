@@ -1,0 +1,19 @@
+.user-listbox {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.user-listbox .p-listbox-item {
+  border-radius: 6px;
+  margin: 2px 4px;
+  transition: background 0.2s;
+}
+
+.user-listbox .p-listbox-item:hover {
+  background: #f5f9ff;
+}
+
+.user-listbox .p-listbox-item.p-highlight {
+  background: #4cafef !important;
+  color: #fff !important;
+}

@@ -1,0 +1,23 @@
+.filters {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.search-input {
+  flex: 1;
+  border-radius: 8px !important;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  transition: border 0.2s ease;
+}
+
+.search-input:focus {
+  border-color: #4cafef;
+  box-shadow: 0 0 5px rgba(76, 175, 239, 0.3);
+}
+
+.filter-dropdown {
+  min-width: 180px;
+}

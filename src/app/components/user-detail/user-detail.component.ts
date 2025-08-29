@@ -6,8 +6,8 @@ import { CardModule } from 'primeng/card';
   selector: 'app-user-detail',
   imports: [CommonModule, CardModule],
   templateUrl: './user-detail.component.html',
-  styleUrl: './user-detail.component.css'
+  styleUrl: './user-detail.component.css',
 })
 export class UserDetailComponent {
-   @Input() email: string | null = null;
+  @Input() email: string | null = null;
 }

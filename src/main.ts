@@ -4,7 +4,5 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app/app.component';
 
 bootstrapApplication(AppComponent, {
-  providers: [
-    importProvidersFrom(BrowserAnimationsModule)
-  ]
+  providers: [importProvidersFrom(BrowserAnimationsModule)],
 });

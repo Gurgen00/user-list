@@ -1,15 +1,15 @@
- <div class="container">
-      <h2>Список пользователей</h2>
+<div class="container">
+  <h2>Список пользователей</h2>
 
-      <app-user-filters
-        (searchChange)="onSearchChange($event)"
-        (filterChange)="onFilterChange($event)"
-      ></app-user-filters>
+  <app-user-filters
+    (searchChange)="onSearchChange($event)"
+    (filterChange)="onFilterChange($event)"
+  ></app-user-filters>
 
-      <app-user-list
-        [users]="filteredUsers()"
-        (userSelect)="onUserSelect($event)"
-      ></app-user-list>
+  <app-user-list
+    [users]="filteredUsers()"
+    (userSelect)="onUserSelect($event)"
+  ></app-user-list>
 
-      <app-user-detail [email]="selectedUserEmail()"></app-user-detail>
-    </div>
+  <app-user-detail [email]="selectedUserEmail()"></app-user-detail>
+</div>

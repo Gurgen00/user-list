@@ -8,7 +8,7 @@ import { User } from '../../services/user.model';
   standalone: true,
   imports: [CommonModule, ListboxModule],
   templateUrl: './user-list.component.html',
-  styleUrls: ['./user-list.component.css']
+  styleUrls: ['./user-list.component.css'],
 })
 export class UserListComponent {
   @Input() users: User[] = [];

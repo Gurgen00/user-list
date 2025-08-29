@@ -9,21 +9,29 @@ import { UserDetailComponent } from './components/user-detail/user-detail.compon
 
 @Component({
   selector: 'app-root',
-  imports: [ CommonModule, UserFiltersComponent, UserListComponent, UserDetailComponent],
+  imports: [
+    CommonModule,
+    UserFiltersComponent,
+    UserListComponent,
+    UserDetailComponent,
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
- private searchTerm = signal('');
+  private searchTerm = signal('');
   private filterType = signal<'all' | 'active' | 'inactive'>('all');
   private selectedEmail = signal<string | null>(null);
 
   constructor(private userService: UserService) {}
 
   filteredUsers = computed(() => {
-    return this.userService.users()
-      .filter(u => u.name.toLowerCase().includes(this.searchTerm().toLowerCase()))
-      .filter(u => {
+    return this.userService
+      .users()
+      .filter((u) =>
+        u.name.toLowerCase().includes(this.searchTerm().toLowerCase())
+      )
+      .filter((u) => {
         if (this.filterType() === 'active') return u.active;
         if (this.filterType() === 'inactive') return !u.active;
         return true;
@@ -37,8 +45,8 @@ export class AppComponent {
   }
 
   onFilterChange(value: string) {
-  this.filterType.set(value as 'all' | 'active' | 'inactive');
-}
+    this.filterType.set(value as 'all' | 'active' | 'inactive');
+  }
 
   onUserSelect(user: User) {
     this.selectedEmail.set(user.email);
